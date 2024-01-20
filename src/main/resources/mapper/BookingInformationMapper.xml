@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.residentialhostel.mapper.BookingInformationMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.residentialhostel.pojo.model.BookingInformation">
+            <id property="bookInformationId" column="book_information_id" jdbcType="INTEGER"/>
+            <result property="houseName" column="house_name" jdbcType="VARCHAR"/>
+            <result property="houseType" column="house_type" jdbcType="VARCHAR"/>
+            <result property="oneDayPrice" column="one_day_price" jdbcType="INTEGER"/>
+            <result property="deposit" column="deposit" jdbcType="INTEGER"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+            <result property="userTelephone" column="user_telephone" jdbcType="VARCHAR"/>
+            <result property="startDate" column="start_date" jdbcType="DATE"/>
+            <result property="endingDays" column="ending_days" jdbcType="DATE"/>
+            <result property="totalPrice" column="total_price" jdbcType="VARCHAR"/>
+            <result property="payState" column="pay_state" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="DATE"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isdelete" column="isDelete" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        book_information_id,house_name,house_type,
+        one_day_price,deposit,user_id,
+        user_name,user_telephone,start_date,
+        ending_days,total_price,pay_state,
+        create_time,update_time,isDelete
+    </sql>
+</mapper>

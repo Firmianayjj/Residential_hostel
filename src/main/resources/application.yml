@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: residential_hostel
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/residential_hostel
+    username: root
+    password: 111111
+server:
+  port: 8080
+mybatis-plus:
+  mapper-locations: mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+        logic-delete-field: isDelete #??????0??????1????
+        logic-delete-value: 1
+        logic-not-delete-value: 0
+        id-type: auto
+#DataSource Config
+
+#    mapper-locations: mapper/*.xml
+#    global-config:
+#      db-config:
+#          logic-delete-field: isDelete #??????0??????1????
+#          logic-delete-value: 1
+#          logic-not-delete-value: 0
+#          id-type: auto

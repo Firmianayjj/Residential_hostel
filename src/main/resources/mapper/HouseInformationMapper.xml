@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.residentialhostel.mapper.HouseInformationMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.residentialhostel.pojo.model.HouseInformation">
+            <id property="houseInformationId" column="house_information_id" jdbcType="INTEGER"/>
+            <result property="houseName" column="house_name" jdbcType="VARCHAR"/>
+            <result property="houseType" column="house_type" jdbcType="VARCHAR"/>
+            <result property="houseAddress" column="house_address" jdbcType="VARCHAR"/>
+            <result property="ownerId" column="owner_id" jdbcType="INTEGER"/>
+            <result property="ownerName" column="owner_name" jdbcType="VARCHAR"/>
+            <result property="oneDayPrice" column="one_day_price" jdbcType="INTEGER"/>
+            <result property="deposit" column="deposit" jdbcType="INTEGER"/>
+            <result property="houseCover" column="house_cover" jdbcType="VARCHAR"/>
+            <result property="homeownerTelephone" column="homeowner_telephone" jdbcType="VARCHAR"/>
+            <result property="houseCity" column="house_city" jdbcType="VARCHAR"/>
+            <result property="supportingFacilities" column="supporting_facilities" jdbcType="VARCHAR"/>
+            <result property="houseIntroduction" column="house_introduction" jdbcType="VARCHAR"/>
+            <result property="leaseDate" column="lease_date" jdbcType="VARCHAR"/>
+            <result property="hits" column="hits" jdbcType="INTEGER"/>
+            <result property="recommend" column="recommend" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isdelete" column="isDelete" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        house_information_id,house_name,house_type,
+        house_address,owner_id,owner_name,
+        one_day_price,deposit,house_cover,
+        homeowner_telephone,house_city,supporting_facilities,
+        house_introduction,lease_date,hits,
+        recommend,create_time,update_time,
+        isDelete
+    </sql>
+</mapper>
