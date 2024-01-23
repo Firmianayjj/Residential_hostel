@@ -6,6 +6,8 @@
 
     <resultMap id="BaseResultMap" type="com.example.residentialhostel.pojo.model.User">
             <id property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="phoneNumber" column="phoneNumber" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
             <result property="userName" column="user_name" jdbcType="VARCHAR"/>
             <result property="userGender" column="user_gender" jdbcType="VARCHAR"/>
             <result property="userNumber" column="user_number" jdbcType="VARCHAR"/>
@@ -18,9 +20,9 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        user_id,user_name,user_gender,
-        user_number,user_age,examine_state,
-        user_type,create_time,update_time,
-        isDelete
+        user_id,phone_number,password,
+        user_name,user_gender,user_number,
+        user_age,examine_state,user_type,
+        create_time,update_time,isDelete
     </sql>
 </mapper>

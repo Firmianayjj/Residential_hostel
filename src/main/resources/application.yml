@@ -1,6 +1,8 @@
 spring:
+  profiles:
+    active: dev
   application:
-    name: residential_hostel
+    name: residential-hostel
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/residential_hostel
@@ -9,10 +11,6 @@ spring:
 server:
   port: 8080
 mybatis-plus:
-  mapper-locations: mapper/*.xml
-  configuration:
-    map-underscore-to-camel-case: false
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   global-config:
     db-config:
         logic-delete-field: isDelete #??????0??????1????
