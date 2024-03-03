@@ -7,7 +7,7 @@ create table user
     password      varchar(255)                          not null comment '用户密码(应进行加密存储，不允许明文存储)',
     user_name     varchar(64)                           null comment '用户姓名',
     user_gender   varchar(64)                           null comment '用户性别',
-    user_number   varchar(64)                           not null comment '用户编号',
+    user_number   varchar(64)                           not null comment '用户编号，使用雪花算法自动生成？',
     user_age      varchar(64)                           null comment '用户年龄',
     examine_state varchar(16) default '0'               not null comment '审核状态,0未审核，1已审核',
     user_type     int                                   not null comment '用户类型，100代表管理员，001代表租客，010代表房东',
