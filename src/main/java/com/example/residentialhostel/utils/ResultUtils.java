@@ -2,10 +2,12 @@ package com.example.residentialhostel.utils;
 
 import com.example.residentialhostel.common.BaseResponse;
 import com.example.residentialhostel.common.ErrorCode;
+import org.springframework.stereotype.Component;
 
 /**
  * 返回工具类
  */
+@Component
 public class ResultUtils {
     /**
      * 成功
